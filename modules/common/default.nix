@@ -1,0 +1,30 @@
+{ pkgs, ... }: {  
+  boot.loader = {
+    systemd-boot.enable = true;
+    efi.canTouchEfiVariables = true;
+  };
+
+  environment.systemPackages = with pkgs; [
+    vim
+  ];
+
+  security = {
+    sudo = {
+      enable = true;
+      wheelNeedsPassword = false;
+      extraConfig = ''
+        Defaults passprompt="Password for root: "
+      '';
+    };
+    pam.enableSSHAgentAuth = true;
+  };
+
+  networking = {
+    firewall.enable = false;
+    networkmanager.enable = true;
+  };
+
+  services.openssh.enable = true;
+
+  time.timeZone = "America/Chicago";
+}
