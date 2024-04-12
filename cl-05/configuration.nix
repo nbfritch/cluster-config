@@ -4,19 +4,8 @@
   imports =
     [
       ./hardware-configuration.nix
+      ../modules/nix
     ];
-
-  nix = {
-    settings = {
-      experimental-features = [ "nix-command" "flakes" ];
-      substituters = [ "http://tsumugi.localdomain" ];
-      trusted-users = [ "@wheel" ];
-    };
-  };
-
-  nixpkgs = {
-    config.allowUnfree = true;
-  };
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
