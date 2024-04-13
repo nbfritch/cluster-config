@@ -71,7 +71,7 @@
           hostname = "cl-05";
           profiles.system = {
             path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.cl-05;
-        };
+          };
         };
         cl-06 = {
           hostname = "cl-06";

@@ -1,4 +1,6 @@
-{ pkgs, ... }: {  
+{ config, pkgs, ... }: {
+  networking.hostName = config.hostName;
+
   boot.loader = {
     systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;
