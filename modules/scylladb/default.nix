@@ -1,7 +1,7 @@
 { config, ... }:
 
 let
-  baseArgs = ["--developer-mode=0" "--smp=3" "--memory=4G"];
+  baseArgs = [ "--developer-mode=0" "--smp=3" "--memory=4G" ];
   seedArgs = if config.isScyllaSeed then baseArgs else baseArgs ++ "--seeds=${config.scyllaSeed}";
 in
 {
