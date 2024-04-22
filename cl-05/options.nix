@@ -2,6 +2,6 @@
   imports = [ ../modules/cluster-options ];
 
   hostName = "cl-05";
-  isScyllaSeed = true;
+  isScyllaSeed = false;
   scyllaSeed = "cl-01";
 }
