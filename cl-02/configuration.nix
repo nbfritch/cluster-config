@@ -6,6 +6,7 @@
       ../modules/cluster-user
       ../modules/common
       ../modules/nix
+      ../modules/scylladb
       ../modules/virtualization
     ];
 
