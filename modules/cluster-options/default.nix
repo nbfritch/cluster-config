@@ -10,11 +10,13 @@ with lib;
     ipAddr = mkOption {
       type = types.str;
     };
-    isScyllaSeed = mkOption {
-      type = types.bool;
-    };
-    scyllaSeed = mkOption {
+    cassandraSeed = mkOption {
       type = types.str;
+      default = "cl-01";
+    };
+    cassandraIface = mkOption {
+      type = types.str;
+      default = "eno1";
     };
   };
 }
