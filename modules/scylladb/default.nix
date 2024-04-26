@@ -2,7 +2,7 @@
 
 let
   baseArgs = [ "--developer-mode=0" "--smp=3" "--memory=4G" ];
-  seedArgs = if config.isScyllaSeed then baseArgs else baseArgs ++ ["--seeds=${config.scyllaSeedIp}"];
+  seedArgs = if config.isScyllaSeed then baseArgs else baseArgs ++ [ "--seeds=${config.scyllaSeedIp}" ];
 in
 {
   virtualisation.oci-containers.containers.scylladb = {
