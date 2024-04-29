@@ -3,8 +3,8 @@
     [
       ../cluster-user
       ../common
+      ../couchdb
       ../nix
-      ../scylladb
       ../virtualization
     ];
 }
