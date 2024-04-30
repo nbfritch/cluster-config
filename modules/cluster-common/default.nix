@@ -3,7 +3,7 @@
     [
       ../cluster-user
       ../common
-      ../couchdb
+      ../etcd
       ../nix
       ../virtualization
     ];
