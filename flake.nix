@@ -5,10 +5,17 @@
     nixpkgs = {
       url = "github:NixOS/nixpkgs/nixos-23.11";
     };
+    tikv = {
+      url = "github:nbfritch/tikv-flake";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+      };
+    };
     deploy-rs.url = "github:serokell/deploy-rs";
   };
 
-  outputs = { self, nixpkgs, deploy-rs, ... }: {
+  outputs = { self, nixpkgs, deploy-rs, ... }@inputs: {
+    overlays = import ./overlays { inherit inputs; };
     nixosConfigurations = {
       cl-01 = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";

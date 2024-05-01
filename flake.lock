@@ -71,7 +71,8 @@
     "root": {
       "inputs": {
         "deploy-rs": "deploy-rs",
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs_2",
+        "tikv": "tikv"
       }
     },
     "systems": {
@@ -86,6 +87,26 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "tikv": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1714517779,
+        "narHash": "sha256-F0WgxkQLKUK6mH1Ef7Y5sBn3Kj7E73SAVgyjrsJ6zEQ=",
+        "owner": "nbfritch",
+        "repo": "tikv-flake",
+        "rev": "6674dd2ce211800213525d01e216b8bb76832af3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nbfritch",
+        "repo": "tikv-flake",
         "type": "github"
       }
     },
