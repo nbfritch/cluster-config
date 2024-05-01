@@ -13,7 +13,7 @@
     ];
     initialClusterState = "new";
     enable = true;
-    listenClientUrls = [ "http://${config.ipAddr}:2379"];
+    listenClientUrls = [ "http://${config.ipAddr}:2379" ];
     listenPeerUrls = [ "http://${config.ipAddr}:2380" ];
     name = config.hostName;
   };
