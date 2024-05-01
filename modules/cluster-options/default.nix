@@ -10,6 +10,9 @@ with lib;
     ipAddr = mkOption {
       type = types.str;
     };
+    rqliteNodeId = mkOption {
+      type = types.int;
+    };
     isScyllaSeed = mkOption {
       type = types.bool;
       default = false;

@@ -1,3 +1,5 @@
+{ outputs, ... }:
+
 {
   nix = {
     settings = {
@@ -9,5 +11,8 @@
 
   nixpkgs = {
     config.allowUnfree = true;
+    overlays = [
+      outputs.overlays.nbfritch-pkgs
+    ];
   };
 }

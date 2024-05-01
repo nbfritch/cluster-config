@@ -15,9 +15,5 @@
     seedAddresses = [
       config.cassandraSeed
     ];
-  } // (if config.cassandraSeed == config.hostName then { } else {
-    seedAddresses = [
-      config.cassandraSeed
-    ];
-  });
+  };
 }

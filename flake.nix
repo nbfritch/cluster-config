@@ -14,31 +14,44 @@
     deploy-rs.url = "github:serokell/deploy-rs";
   };
 
-  outputs = { self, nixpkgs, deploy-rs, ... }@inputs: {
+  outputs = { self, nixpkgs, deploy-rs, ... }@inputs:
+    let
+      inherit (self) outputs;
+      specialArgs = {
+        inherit inputs outputs;
+      };
+    in
+  {
     overlays = import ./overlays { inherit inputs; };
     nixosConfigurations = {
       cl-01 = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = specialArgs;
         modules = [ ./cl-01/configuration.nix ];
       };
       cl-02 = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = specialArgs;
         modules = [ ./cl-02/configuration.nix ];
       };
       cl-03 = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = specialArgs;
         modules = [ ./cl-03/configuration.nix ];
       };
       cl-04 = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = specialArgs;
         modules = [ ./cl-04/configuration.nix ];
       };
       cl-05 = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = specialArgs;
         modules = [ ./cl-05/configuration.nix ];
       };
       cl-06 = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = specialArgs;
         modules = [ ./cl-06/configuration.nix ];
       };
     };
@@ -47,7 +60,7 @@
       sshUser = "cluser";
       sshOpts = [ "-A" ];
       user = "root";
-      interactiveSudo = true;
+      interactiveSudo = false;
       magicRollback = false;
       nodes = {
         cl-01 = {
