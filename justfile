@@ -8,4 +8,6 @@ deploy-in-order:
     nix run github:serokell/deploy-rs .#cl-04
     nix run github:serokell/deploy-rs .#cl-05
     nix run github:serokell/deploy-rs .#cl-06
-    
+
+deploy HOST:
+    nix run github:serokell/deploy-rs .#{{HOST}}    
