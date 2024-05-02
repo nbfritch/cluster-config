@@ -62,6 +62,7 @@
         user = "root";
         interactiveSudo = false;
         magicRollback = false;
+        autoRollback = false;
         nodes = {
           cl-01 = {
             hostname = "cl-01";
