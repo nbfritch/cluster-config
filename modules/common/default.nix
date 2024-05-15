@@ -24,6 +24,7 @@
   networking = {
     firewall.enable = false;
     networkmanager.enable = true;
+    enableIPv6 = true;
   };
 
   services.openssh.enable = true;

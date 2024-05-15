@@ -1,9 +1,9 @@
 {
   imports =
     [
+      ../cassandra
       ../cluster-user
       ../common
-      ../foundationdb
       ../nix
       ../virtualization
     ];
