@@ -1,4 +1,4 @@
-# cluster-config
+# NixOS Cluster Config
 NixOS configuration files for my server cluster
 
 ## Deploy
