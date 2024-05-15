@@ -27,32 +27,32 @@
         cl-01 = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           specialArgs = specialArgs;
-          modules = [ ./cl-01/configuration.nix ];
+          modules = [ ./hosts/cl-01/configuration.nix ];
         };
         cl-02 = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           specialArgs = specialArgs;
-          modules = [ ./cl-02/configuration.nix ];
+          modules = [ ./hosts/cl-02/configuration.nix ];
         };
         cl-03 = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           specialArgs = specialArgs;
-          modules = [ ./cl-03/configuration.nix ];
+          modules = [ ./hosts/cl-03/configuration.nix ];
         };
         cl-04 = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           specialArgs = specialArgs;
-          modules = [ ./cl-04/configuration.nix ];
+          modules = [ ./hosts/cl-04/configuration.nix ];
         };
         cl-05 = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           specialArgs = specialArgs;
-          modules = [ ./cl-05/configuration.nix ];
+          modules = [ ./hosts/cl-05/configuration.nix ];
         };
         cl-06 = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           specialArgs = specialArgs;
-          modules = [ ./cl-06/configuration.nix ];
+          modules = [ ./hosts/cl-06/configuration.nix ];
         };
       };
 

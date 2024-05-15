@@ -3,7 +3,7 @@
     [
       ./hardware-configuration.nix
       ./options.nix
-      ../modules/cluster-common
+      ../../modules/cluster-common
     ];
 
   system.stateVersion = "23.11";

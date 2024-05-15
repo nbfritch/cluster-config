@@ -1,5 +1,5 @@
 {
-  imports = [ ../modules/cluster-options ];
+  imports = [ ../../modules/cluster-options ];
 
   hostName = "cl-02";
   rqliteNodeId = 2;
