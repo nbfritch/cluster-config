@@ -3,7 +3,8 @@
 {
   services.seaweed = {
     enable = true;
-    role = if config.hostName == "cl-01" then "volume"
+    role =
+      if config.hostName == "cl-01" then "volume"
       else if config.hostName == "cl-02" then "volume"
       else if config.hostName == "cl-03" then "volume"
       else if config.hostName == "cl-04" then "volume"
