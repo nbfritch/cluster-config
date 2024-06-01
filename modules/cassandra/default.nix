@@ -5,6 +5,7 @@
     clusterName = "beep-cluster";
     enable = true;
     heapNewSize = "256M";
+    homeDir = "/home/cassandra";
     maxHeapSize = "4G";
     listenAddress = config.ipAddr;
     rpcAddress = config.ipAddr;
