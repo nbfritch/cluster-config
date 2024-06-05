@@ -3,13 +3,7 @@
 
   inputs = {
     nixpkgs = {
-      url = "github:NixOS/nixpkgs/nixos-23.11";
-    };
-    tikv = {
-      url = "github:nbfritch/tikv-flake";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-      };
+      url = "github:NixOS/nixpkgs/nixos-24.05";
     };
     deploy-rs.url = "github:serokell/deploy-rs";
   };

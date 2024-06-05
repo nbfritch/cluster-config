@@ -18,7 +18,7 @@
         Defaults passprompt="Password for root: "
       '';
     };
-    pam.enableSSHAgentAuth = true;
+    pam.sshAgentAuth.enable = true;
   };
 
   networking = {
